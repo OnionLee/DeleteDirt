@@ -54,8 +54,8 @@ bool DeleteDirt::init()
 
 void DeleteDirt::foo(float dt)
 {
-	static int i = 0;
-	i++;
+	static int i = 1;
+	
 	Mask2->SetMaskingWithPos(ccp(300, 300));
 	Mask2->SetMaskingSize(i/100.0f);
 }
