@@ -9,13 +9,13 @@ public:
 
 	bool initWithFile(const char * image, const char * mask);
 
-	//���ϴ� ��ġ�� �׸���
+
 	void SetDrawWithPos(cocos2d::CCPoint pos);
-	//���ϴ� ��ġ�� ����ŷ
+
 	void SetMaskingWithPos(cocos2d::CCPoint pos);
-	//����ũ ������ ����
+
 	void SetMaskingSize(float size);
-	//�̹��� ����
+
 	void SetImageClear();
 	
 protected:
