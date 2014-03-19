@@ -1,5 +1,10 @@
 DeleteDirt
 ==========
+<<<<<<< HEAD
+=======
+[create(imagefilename,maskfilename)]
+로 초기화를 합니다.
+>>>>>>> origin/patch-1
 
 ###create(imagefilename,maskfilename)
 +원본이미지 파일 경로, 마스크 이미지 파일 경로로 초기화 합니다.

@@ -1,11 +1,7 @@
-#ifndef __HELLOWORLD_SCENE_H__
-#define __HELLOWORLD_SCENE_H__
+#pragma once
 
 #include "cocos2d.h"
 #include "MaskImage.h"
-
-using namespace cocos2d;
-
 
 class DeleteDirt : public cocos2d::Layer
 {
@@ -27,9 +23,7 @@ public:
 	MaskImage * Mask2;
 
 
-	bool onTouchBegan(Touch *touch, Event *event);
-	void onTouchMoved(Touch *touch, Event *event);
-	void onTouchEnded(Touch *touch, Event *event);
+	bool onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event);
+	void onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event);
+	void onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event);
 };
-
-#endif // __HELLOWORLD_SCENE_H__

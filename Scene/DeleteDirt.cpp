@@ -54,10 +54,11 @@ bool DeleteDirt::init()
 
 void DeleteDirt::foo(float dt)
 {
-	static int i = 1;
-	
-	Mask2->SetMaskingWithPos(ccp(300, 300));
-	Mask2->SetMaskingSize(i/100.0f);
+	static int i = 0;
+	i++;
+
+	Mask2->maskingWithPos(ccp(300, 300));
+	Mask2->setMaskingSize(i/100.0f);
 }
 
 bool DeleteDirt::onTouchBegan(Touch *touch, Event *event)
@@ -67,7 +68,7 @@ bool DeleteDirt::onTouchBegan(Touch *touch, Event *event)
 
 void DeleteDirt::onTouchMoved(Touch *touch, Event *event)
 {
-	Mask->SetDrawWithPos(touch->getLocation());
+	Mask->drawWithPos(touch->getLocation());
 }
 
 void DeleteDirt::onTouchEnded(Touch *touch, Event *event)

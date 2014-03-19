@@ -1,8 +1,9 @@
 #include "MaskImage.h"
 
+using namespace cocos2d;
 
 MaskImage::MaskImage() :
-	m_pSprite (NULL),
+	m_pImage(NULL),
 	m_pMask(NULL),
 	m_pRender(NULL)
 {
@@ -59,7 +60,7 @@ bool MaskImage::initWithFile(const char * image, const char * mask)
 	return true;
 }
 
-void MaskImage::SetDrawWithPos(CCPoint pos)
+void MaskImage::drawWithPos(CCPoint pos)
 {
 	m_pRender->begin();
 		m_pMask->setPosition(pos);
@@ -67,7 +68,7 @@ void MaskImage::SetDrawWithPos(CCPoint pos)
 	m_pRender->end();
 }
 
-void MaskImage::SetMaskingWithPos(CCPoint pos)
+void MaskImage::maskingWithPos(CCPoint pos)
 {
 	m_pRender->clear(0, 0, 0, 1);
 	m_pRender->begin();
@@ -77,12 +78,12 @@ void MaskImage::SetMaskingWithPos(CCPoint pos)
 	m_pRender->end();
 }
 
-void MaskImage::SetMaskingSize(float size)
+void MaskImage::setMaskingSize(float size)
 {
 	m_pMask->setScale(size);
 }
 
-void MaskImage::SetImageClear()
+void MaskImage::imageClear()
 {
 	m_pRender->clear(0, 0, 0, 1);
 	m_pRender->begin();

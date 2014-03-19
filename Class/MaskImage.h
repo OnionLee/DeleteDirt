@@ -10,13 +10,13 @@ public:
 	bool initWithFile(const char * image, const char * mask);
 
 
-	void SetDrawWithPos(cocos2d::CCPoint pos);
+	void drawWithPos(cocos2d::CCPoint pos);
 
-	void SetMaskingWithPos(cocos2d::CCPoint pos);
+	void maskingWithPos(cocos2d::CCPoint pos);
 
-	void SetMaskingSize(float size);
+	void setMaskingSize(float size);
 
-	void SetImageClear();
+	void imageClear();
 	
 protected:
 	MaskImage();
