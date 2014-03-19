@@ -1,33 +1,29 @@
 #pragma once
+
 #include "cocos2d.h"
 
-using namespace cocos2d;
-class MaskImage : public CCNode
+class MaskImage : public cocos2d::CCNode
 {
 public:
+	static MaskImage * create(const char * image, const char * mask);
+
+	bool initWithFile(const char * image, const char * mask);
 
 
-	static MaskImage * create();
-	static MaskImage * create(const char * Image, const char * mask);
+	void SetDrawWithPos(cocos2d::CCPoint pos);
 
-	bool init();
-	bool initWithFile(const char * Image, const char * mask);
+	void SetMaskingWithPos(cocos2d::CCPoint pos);
 
-	//원하는 위치에 그리기
-	void SetDrawWithPos(CCPoint pos);
-	//원하는 위치에 마스킹
-	void SetMaskingWithPos(CCPoint pos);
-	//마스크 사이즈 조절
 	void SetMaskingSize(float size);
-	//이미지 리셋
+
 	void SetImageClear();
 	
-private:
+protected:
 	MaskImage();
-	~MaskImage();
+	virtual ~MaskImage();
 
-	Sprite * m_pImage;
-	Sprite * m_pMask;
-	RenderTexture * m_pRender;
+	cocos2d::Sprite * m_pImage;
+	cocos2d::Sprite * m_pMask;
+	cocos2d::RenderTexture * m_pRender;
 };
 
