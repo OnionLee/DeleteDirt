@@ -30,7 +30,7 @@ bool MaskImage::initWithFile(const char * image, const char * mask)
 	if (!CCNode::init())
 		return false;
 
-	//���� �̹���
+	
 	m_pImage = Sprite::create(image);
 	m_pImage->retain();
 	m_pImage->setAnchorPoint(ccp(0, 0));
@@ -38,20 +38,20 @@ bool MaskImage::initWithFile(const char * image, const char * mask)
 	setPosition(ccp(m_pImage->getContentSize().width / 2,
 		m_pImage->getContentSize().height / 2));
 
-	//����ũ(������)
+	
 	m_pMask = Sprite::create(mask);
 	m_pMask->retain();
 	ccBlendFunc blend1 = { GL_ZERO, GL_ONE_MINUS_SRC_ALPHA };
 	m_pMask->setBlendFunc(blend1);
 
-	//���� �ؽ���(������)
+	
 	m_pRender = RenderTexture::create(m_pImage->getContentSize().width,
 									m_pImage->getContentSize().height);
 	ccBlendFunc blend2 = { GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA };
 	m_pRender->getSprite()->setBlendFunc(blend2);
 	addChild(m_pRender, 2);
 
-	//�̹��� �ѹ� ���� ��
+
 	m_pRender->begin();
 		m_pImage->visit();
 	m_pRender->end();
