@@ -5,9 +5,9 @@
 class MaskImage : public cocos2d::CCNode
 {
 public:
-	static MaskImage * create(const char * Image, const char * mask);
+	static MaskImage * create(const char * image, const char * mask);
 
-	bool initWithFile(const char * Image, const char * mask);
+	bool initWithFile(const char * image, const char * mask);
 
 	//���ϴ� ��ġ�� �׸���
 	void SetDrawWithPos(cocos2d::CCPoint pos);
