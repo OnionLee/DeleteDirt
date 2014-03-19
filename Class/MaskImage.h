@@ -20,7 +20,7 @@ public:
 	
 protected:
 	MaskImage();
-	~MaskImage();
+	virtual ~MaskImage();
 
 	Sprite * m_pImage;
 	Sprite * m_pMask;
