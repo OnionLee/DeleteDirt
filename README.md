@@ -1,6 +1,6 @@
 DeleteDirt
 ==========
-create(imagefilename,maskfilename); 
+[create(imagefilename,maskfilename)]
 로 초기화를 합니다.
 
 SetDrawWithPos(CCPoint pos);
