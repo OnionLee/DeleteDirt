@@ -5,8 +5,6 @@ using namespace cocos2d;
 class MaskImage : public CCNode
 {
 public:
-
-
 	static MaskImage * create(const char * Image, const char * mask);
 
 	bool initWithFile(const char * Image, const char * mask);
@@ -20,7 +18,7 @@ public:
 	//�̹��� ����
 	void SetImageClear();
 	
-private:
+protected:
 	MaskImage();
 	~MaskImage();
 
