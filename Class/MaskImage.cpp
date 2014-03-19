@@ -36,18 +36,17 @@ bool MaskImage::initWithFile(const char * image, const char * mask)
 	m_pImage->retain();
 	m_pImage->setAnchorPoint(ccp(0, 0));
 
-	setPosition(ccp(m_pImage->getContentSize().width / 2,
-		m_pImage->getContentSize().height / 2));
-
 	
 	m_pMask = Sprite::create(mask);
 	m_pMask->retain();
 	ccBlendFunc blend1 = { GL_ZERO, GL_ONE_MINUS_SRC_ALPHA };
 	m_pMask->setBlendFunc(blend1);
 
-	
-	m_pRender = RenderTexture::create(m_pImage->getContentSize().width,
-									m_pImage->getContentSize().height);
+	int w = Director::getInstance()->getWinSize().width;
+	int h = Director::getInstance()->getWinSize().height;
+	m_pRender = RenderTexture::create(w,h);
+	m_pRender->setPosition(w / 2, h / 2);
+
 	ccBlendFunc blend2 = { GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA };
 	m_pRender->getSprite()->setBlendFunc(blend2);
 	addChild(m_pRender, 2);
