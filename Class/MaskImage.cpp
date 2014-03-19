@@ -1,7 +1,10 @@
 #include "MaskImage.h"
 
 
-MaskImage::MaskImage()
+MaskImage::MaskImage() :
+	m_pSprite (NULL),
+	m_pMask(NULL),
+	m_pRender(NULL)
 {
 }
 
