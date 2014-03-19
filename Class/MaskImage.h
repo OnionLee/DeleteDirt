@@ -1,8 +1,8 @@
 #pragma once
+
 #include "cocos2d.h"
 
-using namespace cocos2d;
-class MaskImage : public CCNode
+class MaskImage : public cocos2d::CCNode
 {
 public:
 	static MaskImage * create(const char * Image, const char * mask);
@@ -10,9 +10,9 @@ public:
 	bool initWithFile(const char * Image, const char * mask);
 
 	//���ϴ� ��ġ�� �׸���
-	void SetDrawWithPos(CCPoint pos);
+	void SetDrawWithPos(cocos2d::CCPoint pos);
 	//���ϴ� ��ġ�� ����ŷ
-	void SetMaskingWithPos(CCPoint pos);
+	void SetMaskingWithPos(cocos2d::CCPoint pos);
 	//����ũ ������ ����
 	void SetMaskingSize(float size);
 	//�̹��� ����
@@ -22,8 +22,8 @@ protected:
 	MaskImage();
 	virtual ~MaskImage();
 
-	Sprite * m_pImage;
-	Sprite * m_pMask;
-	RenderTexture * m_pRender;
+	cocos2d::Sprite * m_pImage;
+	cocos2d::Sprite * m_pMask;
+	cocos2d::RenderTexture * m_pRender;
 };
 
