@@ -7,19 +7,17 @@ class MaskImage : public CCNode
 public:
 
 
-	static MaskImage * create();
 	static MaskImage * create(const char * Image, const char * mask);
 
-	bool init();
 	bool initWithFile(const char * Image, const char * mask);
 
-	//¿øÇÏ´Â À§Ä¡¿¡ ±×¸®±â
+	//ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½×¸ï¿½ï¿½ï¿½
 	void SetDrawWithPos(CCPoint pos);
-	//¿øÇÏ´Â À§Ä¡¿¡ ¸¶½ºÅ·
+	//ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Å·
 	void SetMaskingWithPos(CCPoint pos);
-	//¸¶½ºÅ© »çÀÌÁî Á¶Àý
+	//ï¿½ï¿½ï¿½ï¿½Å© ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	void SetMaskingSize(float size);
-	//ÀÌ¹ÌÁö ¸®¼Â
+	//ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	void SetImageClear();
 	
 private:
