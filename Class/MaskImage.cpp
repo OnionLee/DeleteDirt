@@ -27,7 +27,7 @@ MaskImage * MaskImage::create(const char * image, const char * mask)
 
 bool MaskImage::initWithFile(const char * image, const char * mask)
 {
-	if (!init())
+	if (!CCNode::init())
 		return false;
 
 	//���� �̹���
