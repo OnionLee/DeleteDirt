@@ -53,7 +53,7 @@ bool MaskImage::initWithFile(const char * image, const char * mask)
 
 	//�̹��� �ѹ� ���� ��
 	m_pRender->begin();
-	m_pImage->visit();
+		m_pImage->visit();
 	m_pRender->end();
 
 	return true;
@@ -62,8 +62,8 @@ bool MaskImage::initWithFile(const char * image, const char * mask)
 void MaskImage::SetDrawWithPos(CCPoint pos)
 {
 	m_pRender->begin();
-	m_pMask->setPosition(pos);
-	m_pMask->visit();
+		m_pMask->setPosition(pos);
+		m_pMask->visit();
 	m_pRender->end();
 }
 
@@ -71,9 +71,9 @@ void MaskImage::SetMaskingWithPos(CCPoint pos)
 {
 	m_pRender->clear(0, 0, 0, 1);
 	m_pRender->begin();
-	m_pImage->visit();
-	m_pMask->setPosition(pos);
-	m_pMask->visit();
+		m_pImage->visit();
+		m_pMask->setPosition(pos);
+		m_pMask->visit();
 	m_pRender->end();
 }
 
@@ -86,7 +86,7 @@ void MaskImage::SetImageClear()
 {
 	m_pRender->clear(0, 0, 0, 1);
 	m_pRender->begin();
-	m_pImage->visit();
+		m_pImage->visit();
 	m_pRender->end();
 }
 
