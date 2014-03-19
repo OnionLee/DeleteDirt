@@ -13,10 +13,10 @@ MaskImage::~MaskImage()
 {
 }
 
-MaskImage * MaskImage::create(const char * Image, const char * mask)
+MaskImage * MaskImage::create(const char * image, const char * mask)
 {
 	MaskImage *ptr = new MaskImage();
-	if (ptr && ptr->initWithFile(Image, mask))
+	if (ptr && ptr->initWithFile(image, mask))
 	{
 		ptr->autorelease();
 		return ptr;
@@ -25,13 +25,13 @@ MaskImage * MaskImage::create(const char * Image, const char * mask)
 	return nullptr;
 }
 
-bool MaskImage::initWithFile(const char * Image, const char * mask)
+bool MaskImage::initWithFile(const char * image, const char * mask)
 {
 	if (!init())
 		return false;
 
 	//���� �̹���
-	m_pImage = Sprite::create(Image);
+	m_pImage = Sprite::create(image);
 	m_pImage->retain();
 	m_pImage->setAnchorPoint(ccp(0, 0));
 
